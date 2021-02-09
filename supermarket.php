@@ -25,9 +25,7 @@ class Supermarket extends Shop
         }
 
         $hasProductInStock = false;
-        print_r($this->products);
         foreach ($this->products as $shopProduct) {
-            print_r($shopProduct->getName() === $product->getName());
             if ($shopProduct->getName() === $product->getName() && $shopProduct->getQuantity() >= $quantity) {
 
                 $hasProductInStock = true;
